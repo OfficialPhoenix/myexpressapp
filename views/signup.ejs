@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .form{
+            background-color: mediumvioletred;
+            width: 400px;
+            height: fit-content;
+            margin: auto;
+            display: flex;
+            padding: 2%;
+        }
+        label{
+            font-size: 18px;
+            color: antiquewhite;
+            font-family: cochin;
+            font-weight: bold;
+            text-align: left;
+        }
+        input{
+            width: 400px;
+            padding: 2%;
+            font-size: 15px;
+            outline: none;
+        }
+        input::placeholder{
+            font-size: 15px;
+        }
+        button{
+            width: 200px;
+            font-size: 20px;   
+            font-family: serif;
+            outline: none;
+            padding: 2%;
+            border: none;
+            cursor: pointer;
+            border-radius: 100px;
+            margin-left: 25%;
+        }
+    </style>
+</head>
+<body>
+    <!-- <center> -->
+        <div class="form">
+            <form action="/register" method="POST">
+                <label>Lastname</label><br>
+                <input type="text" placeholder="Enter your lastname"
+                name="lastname" id="lname"><br><br>
+    
+                <label>Firstname</label><br>
+                <input type="text" placeholder="Enter your firstname"
+                name="firstname" id="firstname"><br><br>
+    
+                <label>Email</label><br>
+                <input type="email" placeholder="Enter your email address"
+                name="email" id="email"><br><br>
+    
+                <!-- <label>Gender</label><br>
+                <input type="text" placeholder="your sex..." id="sex" maxlength="6"
+                 minlength="4" required><br><br>
+    
+                <label>City</label><br>
+                <input type="text" placeholder="Enter your city" id="city" required><br><br> -->
+    
+                <label>Password</label><br>
+                <input type="password" placeholder="create password" 
+                name="password" id="pass"
+                minlength="8"><br><br>
+    
+                <!-- <label>Confirm Password</label><br>
+                <input type="password" placeholder="confirm your password" id="cpass" required><br><br> -->
+                <button type="submit">Sign up</button>
+    
+            </form>
+        </div>
+       
+</body>
+</html>

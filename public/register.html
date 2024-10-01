@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <div class="form">
+            <form action="/" method="post">
+                <label>Lastname</label><br>
+                <input type="text" placeholder="Enter your lastname" id="lname" required><br><br>
+    
+                <label>Firstname</label><br>
+                <input type="text" placeholder="Enter your firstname" id="firstname" required><br><br>
+    
+                <label>Email</label><br>
+                <input type="email" placeholder="Enter your email address" id="email" required><br><br>
+    
+                <label>Gender</label><br>
+                <input type="text" placeholder="your sex..." id="sex" maxlength="6"
+                 minlength="4" required><br><br>
+    
+                <label>City</label><br>
+                <input type="text" placeholder="Enter your city" id="city" required><br><br>
+    
+                <label>Password</label><br>
+                <input type="password" placeholder="create password" id="pass"
+                minlength="8" required><br><br>
+    
+                <label>Confirm Password</label><br>
+                <input type="password" placeholder="confirm your password" id="cpass" required><br><br>
+                <button>Submit</button>
+    
+            </form>
+        </div>
+        <script>
+            var email = document.querySelector("#email");
+            var Lname = document.querySelector("#lname");
+            var Fname = document.querySelector("#fname");
+            var gender = document.querySelector("#sex");
+            var city = document.querySelector("#city");
+            var password = document.querySelector("#pass");
+            var confirm_password = document.querySelector("#cpass");
+            var button = document.querySelector("button");
+
+            button.addEventListener("click", (e) =>{
+                var signUpData = {
+                    email: email.value,
+                    lastname: Lname.value,
+                    firstname: Fname.value,
+                    gender: gender.value,
+                    city: city.value,
+                    password: password.value
+                };
+                
+                fetch('/users', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(signUpData)
+                })
+        })
+
+        </script>
+    </center>
+</body>
+</html>

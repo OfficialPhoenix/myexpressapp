@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/public/loginstyle.css">
+    <style>
+    body{
+    background-color: rgb(37, 63, 73);
+    }
+    .form{
+    margin: auto;
+    background-color: cadetblue;
+    width: 450px;
+    height: 350px;
+    margin-top: 10%;
+    }
+    input{
+        width: 400px;
+        padding: 1%;
+        font-size: 19px;
+        font-family: sans-serif;
+        margin-left: 5%;
+        outline: none;
+    }
+    label{
+        margin-left: 5%;
+        font-size: 20px;
+    }
+    button{
+        width: 50%;
+        padding: 3%;
+        font-size: 16px;
+        outline: none;
+        border: none;
+        border-radius: 100px;
+        margin-left: 20%;
+        cursor: pointer;
+    }
+    button:hover{
+        background-color: black;
+        color: white;
+    }
+    span{
+        margin-left: 35%;
+        font-size: 20px;
+    }
+    .header{
+        background-color: black;
+        width: 100%;
+      }
+    </style>
+</head>
+<body>
+   
+      <div class="form">
+    <form action="/login" method="post">
+        <div class="header">
+            <h1 style="text-align: center; font-size: 35px; font-family: serif; color: rgb(247, 218, 181);">
+                Login</h1>
+            </div>
+            <div>
+                <b style="text-align: center; font-size: 17px; font-family: courier;">
+                    <%= error%></b></div>
+        <label><b>Email:</b></label><br>
+        <input type="email" name="email" placeholder="Enter your registered email address..." required/><br><br>
+        <label><b>Password:</b></label><br>
+        <input type="password" name="password" placeholder="Enter correct password..." required/><br><br
+        <br><br><button type="submit">Login</button><br><br>
+        <span>Don't have an account?
+            <a href="/register" style="color: white;">Register</a></span>
+            
+            
+    </form>
+    </div>
+</body>
+</html>
